@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Sandbox - Hub de Estudos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegação Lateral -->
+    <aside>
+        <div class="logo">StudyApp Proto</div>
+        
+        <div class="nav-group">
+            <div class="nav-group-title">1. Diagnóstico</div>
+            <button class="nav-item active" data-tab="tab-problemas">Matriz de Problemas</button>
+            <button class="nav-item" data-tab="tab-analise">Análise de Causa</button>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-group-title">2. Empatia</div>
+            <button class="nav-item" data-tab="tab-personas">Personas Comparadas</button>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-group-title">3. Solução</div>
+            <button class="nav-item" data-tab="tab-arquitetura">Filtro de Ideias</button>
+            <button class="nav-item" data-tab="tab-wireframe">Wireframe Interativo</button>
+        </div>
+
+        <div class="nav-group">
+            <div class="nav-group-title">4. Validação</div>
+            <button class="nav-item" data-tab="tab-testes">Roteiro de Teste & Pitch</button>
+        </div>
+    </aside>
+
+    <!-- Área de Conteúdo Principal -->
+    <main>
+        
+        <!-- TAB: MATRIZ DE PROBLEMAS -->
+        <section id="tab-problemas" class="tab-content active">
+            <h1>Exploração de Atritos</h1>
+            <p class="subtitle">Avaliação quantitativa de dores do usuário para definição de escopo inicial do MVP.</p>
+            
+            <div class="card">
+                <h3>Matriz de Priorização de Dores</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Problema Identificado</th>
+                            <th>Frequência</th>
+                            <th>Impacto</th>
+                            <th>Clareza</th>
+                            <th>Potencial MVP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-highlight">
+                            <td><strong>Fragmentação de Materiais</strong> (Alternar entre plataformas/físico)</td>
+                            <td>5/5 <small>(Generalizado)</small></td>
+                            <td>5/5 <small>(Gera abandono)</small></td>
+                            <td>5/5 <small>(Causa direta)</small></td>
+                            <td>5/5 <small>(Foco de Hub)</small></td>
+                        </tr>
+                        <tr>
+                            <td>Paralisia por excesso de conteúdo na internet</td>
+                            <td>4/5</td>
+                            <td>4/5</td>
+                            <td>3/5</td>
+                            <td>3/5</td>
+                        </tr>
+                        <tr>
+                            <td>Perda de foco por notificações digitais</td>
+                            <td>5/5</td>
+                            <td>4/5</td>
+                            <td>4/5</td>
+                            <td>2/5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="highlight-text">
+                    🚀 Foco Escolhido para o Protótipo: Fragmentação de Materiais e Perda de Controle Operacional.
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB: ANÁLISE DE CAUSA -->
+        <section id="tab-analise" class="tab-content">
+            <h1>Análise Aprofundada do Problema</h1>
+            <p class="subtitle">Compreensão de gatilhos, desdobramentos emocionais e operacionais.</p>
+            
+            <div class="problem-box">
+                "Estudantes perdem tempo e energia alternando entre diversas plataformas e arquivos físicos, resultando na sensação de descontrole e no abandono das metas diárias."
+            </div>
+
+            <div class="card">
+                <h3>Momentos de Maior Atrito</h3>
+                <ul class="punchy-list">
+                    <li><strong>Véspera de Provas:</strong> Desespero ao tentar localizar o link correto do drive ou a folha física perdida.</li>
+                    <li><strong>Transição de Turno:</strong> Chegada em casa pós-aula onde o contexto de estudo se perde na bagunça digital.</li>
+                    <li><strong>Abertura de Sessão:</strong> Gastar os primeiros 20 minutos organizando abas em vez de absorver o conteúdo.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Impacto no Ciclo de Aprendizado</h3>
+                <ul class="punchy-list">
+                    <li><strong>Curto Prazo:</strong> Microfrustrações contínuas, picos de cortisol e fadiga de decisão antes do estudo começar.</li>
+                    <li><strong>Longo Prazo:</strong> Perda de autoconfiança, sensação crônica de incompetência e abandono de cronogramas de médio prazo.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TAB: PERSONAS -->
+        <section id="tab-personas" class="tab-content">
+            <h1>Arquétipos de Usuários (Personas)</h1>
+            <p class="subtitle">Duas perspectivas distintas enfrentando a mesma dor central.</p>
+            
+            <div class="persona-grid">
+                <div class="card">
+                    <span class="badge">Persona 1 - O Vestibulando</span>
+                    <h3>Lucas Rocha, 19 anos</h3>
+                    <p class="quote">"Eu passo mais tempo encontrando o que estudar do que estudando de verdade."</p>
+                    <p><strong>Contexto:</strong> Cursinho pré-vestibular focado em medicina.</p>
+                    <p><strong>Comportamento:</strong> Baixa PDFs no drive, tira fotos do quadro da aula, assiste YouTube em velocidade 2x e anota em fichários físicos.</p>
+                    <p><strong>Frustração:</strong> Fragmentação extrema impede que ele saiba seu real progresso por matéria.</p>
+                </div>
+                
+                <div class="card">
+                    <span class="badge">Persona 2 - O Universitário Trabalhador</span>
+                    <h3>Beatriz Silva, 22 anos</h3>
+                    <p class="quote">"Se eu demoro 10 minutos para me achar no sistema, perco a janela de estudo do meu almoço."</p>
+                    <p><strong>Contexto:</strong> Graduação noturna em Administração + Estágio integral.</p>
+                    <p><strong>Comportamento:</strong> Estuda nos intervalos do transporte público usando o celular.</p>
+                    <p><strong>Frustração:</strong> Perde as metas diárias porque os arquivos não abrem de forma integrada no mobile ou dependem de anotações que ficaram no caderno em casa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB: FILTRO DE IDEIAS -->
+        <section id="tab-arquitetura" class="tab-content">
+            <h1>Filtro de Viabilidade da Solução</h1>
+            <p class="subtitle">Mapeamento de abordagens e delimitação do escopo do aplicativo conceitual.</p>
+            
+            <div class="card">
+                <h3>O que o Aplicativo Faz (E o que ele NÃO faz)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Soluções Digitais (No Escopo do App)</th>
+                            <th>Soluções Não-Digitais / Fora de Escopo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hub de Links Contextuais:</strong> Centralizar ponteiros para arquivos locais, nuvem e fotos associadas ao mesmo tópico.</td>
+                            <td><strong>Métodos de Produtividade Analógicos:</strong> Criação de planners impressos ou técnicas baseadas estritamente em papel.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agrupamento por Tópico (Ex: Genética):</strong> Romper a barreira do formato do arquivo e focar na matéria.</td>
+                            <td><strong>Armazenamento Próprio em Nuvem:</strong> O app não vai hospedar gigabytes de arquivos, apenas orquestrar os acessos.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB: WIREFRAME INTERATIVO -->
+        <section id="tab-wireframe" class="tab-content">
+            <h1>Protótipo de Baixa Fidelidade (Wireframe)</h1>
+            <p class="subtitle">Representação estrutural focada em centralizar múltiplos formatos de arquivo sob o mesmo tópico didático.</p>
+            
+            <div class="wireframe-container">
+                <div class="wf-header">
+                    <span class="wf-topic-badge">Biologia > Vestibular</span>
+                    <h2>Aula de Genética</h2>
+                    <p class="wf-meta">4 materiais unificados neste tópico</p>
+                </div>
+                
+                <div class="wf-body">
+                    <div class="wf-section-title">Materiais Disponíveis</div>
+                    
+                    <div class="wf-grid">
+                        <div class="wf-card" data-material="pdf">
+                            <div class="wf-icon-indicator indicator-pdf"></div>
+                            <strong>Resumo_Leis.pdf</strong>
+                            <span>PDF de Apoio</span>
+                        </div>
+                        
+                        <div class="wf-card" data-material="video">
+                            <div class="wf-icon-indicator indicator-video"></div>
+                            <strong>Playlist YouTube</strong>
+                            <span>Link Externo</span>
+                        </div>
+
